@@ -1,10 +1,9 @@
 import os
 import csv
 
-fileDir = "/Users/JJ/Documents/GitHub/Python-challenge/PyBank/Resources/"
 dataFile = "budget_data.csv"
 
-filePath = os.path.join(fileDir, dataFile)
+filePath = os.path.join('Resources', dataFile)
 
 budgetMonth = []
 monthPnL = []
@@ -43,8 +42,6 @@ print(f"Great Decrease : {budgetMonth[gDecMonth]} ${gDecrease:,}")
 print("----------------------------------------")
 
 #export to txt 
-#https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file-in-python-3/36571602
-
 import sys
 
 f=open("Analysis_result.txt", "a")
@@ -60,14 +57,3 @@ print(f"Great Decrease : {budgetMonth[gDecMonth]} ${gDecrease:,}")
 print("----------------------------------------")
 
 f.close
-
-
-#How to convert data into List or Dict or Set? like  [(Jan-10,867884), (Feb-10,984655),,,]
-# what is data type when import csv ?  List
-
-# 1. Total numer of months  --> len of Date column?  - done
-# 2. Net total amount of P&L over the entire period -done
-# 3. Average change of the changes in P&L over the entire period - done 
-# 4. The greatest increase in Profits (date and amount) over the entire period
-# 5. The greatest decrease in Losses (date and amount) over the entire period
-# 6. Print analysis to the terminal abd export a text file with results
