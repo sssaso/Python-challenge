@@ -4,7 +4,7 @@ import csv
 voterList = []
 candiates = []
 
-filePath = os.path.join(".","Resources","election_data.csv")
+filePath = os.path.join("Resources","election_data.csv")
 
 with open(filePath, 'r') as csvFile:
     elecData = csv.reader(csvFile, delimiter=',')
@@ -40,32 +40,32 @@ Result_sortedByVote = sorted(Results, key=lambda t:t[1], reverse=True)
 winner = Result_sortedByVote[0][0]
 
 print("Election Results")
-print("-----------------------------")
+print("---------------------------")
 print(f"Total Votes: {totalVote} ")
-print("-----------------------------")
-print(f"Khan :  {Khan_perc:.2%}  ({Khan_vote})")
-print(f"Correy: {Correy_perc:.2%}  ({Correy_vote})")
-print(f"Li :    {Li_perc:.2%}  ({Li_vote})")
-print(f"O'Tooly:{OTooley_perc:.2%}  ({OTooley_vote})")
-print("-----------------------------")
+print("---------------------------")
+print(f"Khan :  {Khan_perc:.2%}  ({Khan_vote:,})")
+print(f"Correy: {Correy_perc:.2%}  ({Correy_vote:,})")
+print(f"Li :    {Li_perc:.2%}  ({Li_vote:,})")
+print(f"O'Tooly: {OTooley_perc:.2%}  ({OTooley_vote:,})")
+print("---------------------------")
 print(f'Winner:  {winner}')
-print("-----------------------------")
+print("---------------------------")
 
 #Export to txt:  "a" append
 import sys
-f=open("Election_Results.txt", "a")
+f=open("Election_Results.txt", "w")
 sys.stdout = f
 
 print("Election Results")
-print("-----------------------------")
+print("---------------------------")
 print(f"Total Votes: {totalVote} ")
-print("-----------------------------")
-print(f"Khan :  {Khan_perc:.2%}  ({Khan_vote})")
-print(f"Correy: {Correy_perc:.2%}  ({Correy_vote})")
-print(f"Li :    {Li_perc:.2%}  ({Li_vote})")
-print(f"O'Tooly:{OTooley_perc:.2%}  ({OTooley_vote})")
-print("-----------------------------")
+print("---------------------------")
+print(f"Khan :  {Khan_perc:.2%}  ({Khan_vote:,})")
+print(f"Correy: {Correy_perc:.2%}  ({Correy_vote:,})")
+print(f"Li :    {Li_perc:.2%}  ({Li_vote:,})")
+print(f"O'Tooly: {OTooley_perc:.2%}  ({OTooley_vote:,})")
+print("---------------------------")
 print(f'Winner:  {winner}')
-print("-----------------------------")
+print("---------------------------")
 
 f.close

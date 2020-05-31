@@ -44,7 +44,7 @@ print("----------------------------------------")
 #export to txt 
 import sys
 
-f=open("Analysis_result.txt", "a")
+f=open("Analysis_result.txt", "w")
 sys.stdout = f
 
 print("Financial Analysis")
